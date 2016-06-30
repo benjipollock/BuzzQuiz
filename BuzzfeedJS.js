@@ -1,7 +1,8 @@
 /**
  * Created by itc_user on 6/19/2016.
  */
-var result = function() {
+var resultFunction = function() {
+
     var count = 0;
     
     var superbowl=document.getElementsByName("superbowl");
@@ -15,8 +16,9 @@ var result = function() {
     var cup=document.getElementsByName("cup");
     for (var j=0; j < cup.length; j++){
         if (cup[j].checked){
-            count += parseInt(cup[j].value);
+            count += parseFloat(cup[j].value);
         }
+
     }
 
 
@@ -40,26 +42,33 @@ var result = function() {
             count += parseInt(pics[l].value);
         }
     }
-    
+
+
+    var result = document.getElementsByClassName('result')[0];
     if (count === 6)
     {
-        alert("You're a local!")
+        result.style.display = 'block';
+        location.href="#result";
+        result.innerHTML = "You're a local!!";
     }
     else if (count < 6 && count>=4)
     {
-        alert("Did you just come here for the schools?")
+        result.style.display = 'block';
+        location.href="#result";
+        result.innerHTML = "Did you just come here for the schools?";
     }
     else if (count < 4 && count >= 2)
     {
-        alert("You probably have friends in Pittsburgh")
+        result.style.display = 'block';
+        location.href="#result";
+        result.innerHTML = "You probably have friends in Pittsburgh";
     }
     else if (count < 2 && count >= 0)
     {
-        alert("You have no connection to Pittsburgh. Go visit!")
-    }
-    else
-    {
-        alert(count);
+        result.style.display = 'block';
+        location.href="#result";
+        result.innerHTML = "You have no connection to Pittsburgh. Go visit!";
+
     }
     
-}
+};

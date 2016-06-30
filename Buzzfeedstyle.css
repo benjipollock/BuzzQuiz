@@ -5,3 +5,18 @@
 .question{
     margin-bottom: 10px;
 }
+.result{
+    display: none;
+    background-image: url(http://www.ronsaari.com/stockImages/pennsylvania/PittsburghSkylineAtDuskPanoramic.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height:400px;
+    color: yellow;
+    font-size: 40px;
+    padding-top:150px;
+    font-weight: 700;
+    text-shadow: 3px 3px 3px black;
+
+
+}
